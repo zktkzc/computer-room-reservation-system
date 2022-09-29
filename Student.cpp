@@ -100,7 +100,7 @@ void Student::applyOrder()
 		cout << "输入有误，请重新输入" << endl;
 	}
 
-	cout << "预约成功！审核中" << endl;
+	cout << "预约成功！审核中..." << endl;
 
 	ofstream ofs(ORDER_FILE, ios::app);
 	ofs << "date:" << date << " ";
