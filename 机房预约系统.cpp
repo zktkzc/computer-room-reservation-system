@@ -35,6 +35,9 @@ int main()
 		case 3:  //管理员身份
 			break;
 		case 0:  //退出系统
+			cout << "欢迎下次使用！" << endl;
+			system("pause");
+			return 0;
 			break;
 		default:
 			cout << "输入有误，请重新选择！" << endl;
