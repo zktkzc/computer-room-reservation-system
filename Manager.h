@@ -8,6 +8,7 @@
 #include"GlobalFile.h"
 #include"Student.h"
 #include"Teacher.h"
+#include"ComputerRoom.h"
 using namespace std;
 
 // 管理员类
@@ -46,5 +47,8 @@ public:
 
 	// 教师容器
 	vector<Teacher> vTea;
+
+	// 机房信息容器
+	vector<ComputerRoom> vCom;
 };
 
