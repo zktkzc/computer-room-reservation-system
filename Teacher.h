@@ -1,5 +1,6 @@
 #pragma once
 #include<iostream>
+#include<vector>
 #include "Identity.h"
 #include"OrderFile.h"
 using namespace std;
