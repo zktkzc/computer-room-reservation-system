@@ -28,7 +28,6 @@ public:
 	// 取消预约
 	void cancleOrder();
 
-private:
 	// 学生学号
 	int m_Id;
 };

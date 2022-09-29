@@ -22,8 +22,6 @@ public:
 	// …Û∫À‘§‘º
 	void validOrder();
 
-private:
-
 	// ÷∞π§±‡∫≈
 	int m_EmpId;
 };
