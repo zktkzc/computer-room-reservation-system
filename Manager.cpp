@@ -100,6 +100,10 @@ void Manager::addPerson()
 	ofs << id << " " << name << " " << pwd << " " << endl;
 	cout << "添加成功！" << endl;
 	ofs.close();
+
+	// 初始化就容器
+	this->initVector();
+
 	system("pause");
 	system("cls");
 }
