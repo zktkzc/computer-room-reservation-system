@@ -35,6 +35,52 @@ void Manager::openMenu()
 // 添加账号
 void Manager::addPerson()
 {
+	cout << "请输入添加账号的类型：" << endl;
+	cout << "1、添加学生" << endl;
+	cout << "2、添加教师" << endl;
+
+	// 操作的文件名
+	string fileName;
+	// 提示id号
+	string tip;
+
+	ofstream ofs;
+
+	int select = 0;
+	cin >> select;
+
+	if (select == 1)
+	{
+		// 添加学生
+		fileName = STUDENT_FILE;
+		tip = "请输入学号：";
+	}
+	else
+	{
+		// 添加老师
+		fileName = TEACHER_FILE;
+		tip = "请输入职工编号：";
+	}
+
+	ofs.open(fileName, ios::out | ios::app); // 利用追加的方式写文件
+
+	int id;
+	string name;
+	string pwd;
+
+	cout << tip << endl;
+	cin >> id;
+	cout << "请输入用户名：" << endl;
+	cin >> name;
+	cout << "请输入密码：" << endl;
+	cin >> pwd;
+
+	// 开始向文件中添加数据
+	ofs << id << " " << name << " " << pwd << " " << endl;
+	cout << "添加成功！" << endl;
+	ofs.close();
+	system("pause");
+	system("cls");
 }
 
 // 查看账号

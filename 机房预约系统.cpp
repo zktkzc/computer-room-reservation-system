@@ -19,7 +19,6 @@ void managerMenu(Identity*& manager)
 		Manager* man = (Manager*)manager;
 
 		int select = 0;
-		cout << "ÇëÊäÈëÄúµÄÑ¡Ôñ£º" << endl;
 		cin >> select;
 		if (select == 1)
 		{
