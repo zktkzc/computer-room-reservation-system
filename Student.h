@@ -1,5 +1,6 @@
 #pragma once
 #include<iostream>
+#include<string>
 #include"Identity.h"
 using namespace std;
 
@@ -26,7 +27,7 @@ public:
 	void showAllOrder();
 
 	// 取消预约
-	void cancleOrder();
+	void cancelOrder();
 
 	// 学生学号
 	int m_Id;
