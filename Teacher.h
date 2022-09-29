@@ -1,6 +1,7 @@
 #pragma once
 #include<iostream>
 #include "Identity.h"
+#include"OrderFile.h"
 using namespace std;
 
 // ΩÃ ¶¿‡
