@@ -108,9 +108,39 @@ void Manager::addPerson()
 	system("cls");
 }
 
+void printStudent(Student& s)
+{
+	cout << "学号：" << s.m_Id << " 用户名：" << s.m_Name << " 密码：" << s.m_Pwd << endl;
+}
+
+void printTeacher(Teacher& t)
+{
+	cout << "职工编号：" << t.m_EmpId << " 用户名：" << t.m_Name << " 密码：" << t.m_Pwd << endl;
+}
+
 // 查看账号
 void Manager::showPerson()
 {
+	cout << "请选择要查看的内容：" << endl;
+	cout << "1、查看所有学生" << endl;
+	cout << "2、查看所有教师" << endl;
+
+	int select;
+	cin >> select;
+
+	if (select == 1)
+	{
+		cout << "所有学生信息如下：" << endl;
+		for_each(vStu.begin(), vStu.end(), printStudent);
+	}
+	else
+	{
+		cout << "所有教师信息如下：" << endl;
+		for_each(vTea.begin(), vTea.end(), printTeacher);
+	}
+
+	system("pause");
+	system("cls");
 }
 
 // 查看机房信息
