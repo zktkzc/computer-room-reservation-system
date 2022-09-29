@@ -46,6 +46,8 @@ void Manager::addPerson()
 	string fileName;
 	// 提示id号
 	string tip;
+	// 重复错误提示
+	string errorTip;
 
 	ofstream ofs;
 
@@ -57,12 +59,14 @@ void Manager::addPerson()
 		// 添加学生
 		fileName = STUDENT_FILE;
 		tip = "请输入学号：";
+		errorTip = "学号重复，请重新输入！";
 	}
 	else
 	{
 		// 添加老师
 		fileName = TEACHER_FILE;
 		tip = "请输入职工编号：";
+		errorTip = "职工编号重复，请重新输入！";
 	}
 
 	ofs.open(fileName, ios::out | ios::app); // 利用追加的方式写文件
@@ -72,7 +76,21 @@ void Manager::addPerson()
 	string pwd;
 
 	cout << tip << endl;
-	cin >> id;
+	while (true)
+	{
+		cin >> id;
+		bool res = this->checkRepeat(id, select);
+		if (res)
+		{
+			// 有重复
+			cout << errorTip << endl;
+		}
+		else
+		{
+			break;
+		}
+	}
+
 	cout << "请输入用户名：" << endl;
 	cin >> name;
 	cout << "请输入密码：" << endl;
@@ -139,4 +157,32 @@ void Manager::initVector()
 	}
 	cout << "当前的教师数量为：" << this->vTea.size() << endl;
 	ifs.close();
+}
+
+// 检测重复
+bool Manager::checkRepeat(int id, int type)
+{
+	if (type == 1)
+	{
+		// 检测学生
+		for (vector<Student>::iterator it = this->vStu.begin(); it != this->vStu.end(); it++)
+		{
+			if (id == it->m_Id)
+			{
+				return true;
+			}
+		}
+	}
+	else
+	{
+		// 检测教师
+		for (vector<Teacher>::iterator it = this->vTea.begin(); it != this->vTea.end(); it++)
+		{
+			if (id == it->m_EmpId)
+			{
+				return true;
+			}
+		}
+	}
+	return false;
 }

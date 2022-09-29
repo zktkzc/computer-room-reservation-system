@@ -37,6 +37,9 @@ public:
 	// 初始化容器
 	void initVector();
 
+	// 检测重复
+	bool checkRepeat(int id, int tupe);
+
 	// 学生容器
 	vector <Student> vStu;
 
