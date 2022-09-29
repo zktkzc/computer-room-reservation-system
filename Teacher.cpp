@@ -16,10 +16,21 @@ Teacher::Teacher(int empId, string name, string pwd)
 // 菜单界面
 void Teacher::openMenu()
 {
+	cout << "欢迎教师：" << this->m_Name << "登录！" << endl;
+	cout << "\t\t ----------------------------------\n";
+	cout << "\t\t|                                  |\n";
+	cout << "\t\t|          1.查看所有预约          |\n";
+	cout << "\t\t|                                  |\n";
+	cout << "\t\t|          2.审核预约              |\n";
+	cout << "\t\t|                                  |\n";
+	cout << "\t\t|          0.注销登录              |\n";
+	cout << "\t\t|                                  |\n";
+	cout << "\t\t ----------------------------------\n";
+	cout << "请选择您的操作： " << endl;
 }
 
 // 查看所有预约
-void Teacher::showOrder()
+void Teacher::showAllOrder()
 {
 }
 

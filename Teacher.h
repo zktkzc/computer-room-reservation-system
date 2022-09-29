@@ -17,7 +17,7 @@ public:
 	virtual void openMenu();
 
 	// 查看所有预约
-	void showOrder();
+	void showAllOrder();
 
 	// 审核预约
 	void validOrder();

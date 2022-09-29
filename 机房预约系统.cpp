@@ -7,6 +7,41 @@
 #include"Teacher.h"
 using namespace std;
 
+//教师菜单
+void TeacherMenu(Identity*& teacher)
+{
+	while (true)
+	{
+		//教师菜单
+		teacher->openMenu();
+
+		Teacher* tea = (Teacher*)teacher;
+		int select = 0;
+
+		cin >> select;
+
+		if (select == 1)
+		{
+			//查看所有预约
+			tea->showAllOrder();
+		}
+		else if (select == 2)
+		{
+			//审核预约
+			tea->validOrder();
+		}
+		else
+		{
+			delete teacher;
+			cout << "注销成功" << endl;
+			system("pause");
+			system("cls");
+			return;
+		}
+
+	}
+}
+
 //学生菜单
 void studentMenu(Identity*& student)
 {
