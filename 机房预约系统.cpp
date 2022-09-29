@@ -61,13 +61,28 @@ void login(string fileName, int type)
 				system("pause");
 				system("cls");
 				person = new Student(id, name, pwd);
+				return;
 			}
 		}
 	}
 	else if (type == 2)
 	{
 		// 教师身份验证
-
+		int fId;
+		string fName;
+		string fPwd;
+		while (ifs >> fId && ifs >> fName && ifs >> fPwd)
+		{
+			// 与用户输入的信息做对比
+			if (fId == id && fName == name && fPwd == pwd)
+			{
+				cout << "教师验证登录成功！" << endl;
+				system("pause");
+				system("cls");
+				person = new Teacher(id, name, pwd);
+				return;
+			}
+		}
 	}
 	else if (type == 3)
 	{

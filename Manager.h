@@ -6,6 +6,7 @@ using namespace std;
 // 管理员类
 class Manager :public Identity
 {
+public:
 	// 默认构造
 	Manager();
 
