@@ -1,5 +1,7 @@
 #pragma once
+#include<iostream>
 #include "Identity.h"
+using namespace std;
 
 // ΩÃ ¶¿‡
 class Teacher :public Identity
