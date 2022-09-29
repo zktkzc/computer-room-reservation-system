@@ -1,8 +1,6 @@
-﻿  OrderFile.cpp
-D:\Project\C\C++\机房预约系统\OrderFile.cpp(24,27): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-D:\Project\C\C++\机房预约系统\OrderFile.cpp(32,27): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
-D:\Project\C\C++\机房预约系统\OrderFile.cpp(40,24): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
-D:\Project\C\C++\机房预约系统\OrderFile.cpp(48,26): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
-D:\Project\C\C++\机房预约系统\OrderFile.cpp(56,25): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
-D:\Project\C\C++\机房预约系统\OrderFile.cpp(64,25): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+﻿  Manager.cpp
+  Student.cpp
+  机房预约系统.cpp
+  正在生成代码...
+  LINK : 没有找到 D:\Project\C\C++\机房预约系统\x64\Debug\机房预约系统.exe 或上一个增量链接没有生成它；正在执行完全链接
   机房预约系统.vcxproj -> D:\Project\C\C++\机房预约系统\x64\Debug\机房预约系统.exe
