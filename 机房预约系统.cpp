@@ -2,6 +2,9 @@
 #include<fstream>
 #include"Identity.h"
 #include"GlobalFile.h"
+#include"Manager.h"
+#include"Student.h"
+#include"Teacher.h"
 using namespace std;
 
 void login(string fileName, int type)
@@ -46,7 +49,20 @@ void login(string fileName, int type)
 	if (type == 1)
 	{
 		// 学生身份验证
-
+		int fId;
+		string fName;
+		string fPwd;
+		while (ifs >> fId && ifs >> fName && ifs >> fPwd)
+		{
+			// 与用户输入的信息做对比
+			if (fId == id && fName == name && fPwd == pwd)
+			{
+				cout << "学生验证登录成功！" << endl;
+				system("pause");
+				system("cls");
+				person = new Student(id, name, pwd);
+			}
+		}
 	}
 	else if (type == 2)
 	{
