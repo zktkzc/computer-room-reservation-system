@@ -7,6 +7,52 @@
 #include"Teacher.h"
 using namespace std;
 
+// 进入管理员的子菜单页面
+void managerMenu(Identity*& manager)
+{
+	while (true)
+	{
+		// 调用管理员子菜单
+		manager->openMenu();
+
+		// 将父类指针转为子类指针，调用子类里其他接口
+		Manager* man = (Manager*)manager;
+
+		int select = 0;
+		cout << "请输入您的选择：" << endl;
+		cin >> select;
+		if (select == 1)
+		{
+			// 添加账号
+			man->addPerson();
+		}
+		else if (select == 2)
+		{
+			// 查看账号
+			man->showPerson();
+		}
+		else if (select == 3)
+		{
+			// 查看机房信息
+			man->showComputer();
+		}
+		else if (select == 4)
+		{
+			// 清空预约
+			man->cleanFile();
+		}
+		else
+		{
+			// 销毁堆区对象
+			delete manager;
+			cout << "注销成功！" << endl;
+			system("pause");
+			system("cls");
+			return;
+		}
+	}
+}
+
 void login(string fileName, int type)
 {
 	// 父类指针，用于指向子类对象
@@ -98,6 +144,9 @@ void login(string fileName, int type)
 				system("pause");
 				system("cls");
 				person = new Manager(name, pwd);
+
+				// 进入管理员子菜单界面
+				managerMenu(person);
 				return;
 			}
 		}

@@ -1,5 +1,6 @@
 #pragma once
 #include<iostream>
+#include<string>
 #include "Identity.h"
 using namespace std;
 
@@ -26,7 +27,7 @@ public:
 	void showComputer();
 
 	// 清空所有预约记录
-	void clearFile();
+	void cleanFile();
 
 };
 
