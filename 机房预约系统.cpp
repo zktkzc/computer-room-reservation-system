@@ -87,7 +87,20 @@ void login(string fileName, int type)
 	else if (type == 3)
 	{
 		// 管理员身份验证
-
+		string fName;
+		string fPwd;
+		while (ifs >> fName && ifs >> fPwd)
+		{
+			// 与用户输入的信息做对比
+			if (fName == name && fPwd == pwd)
+			{
+				cout << "管理员验证登录成功！" << endl;
+				system("pause");
+				system("cls");
+				person = new Manager(name, pwd);
+				return;
+			}
+		}
 	}
 
 	cout << "验证登录失败！" << endl;
