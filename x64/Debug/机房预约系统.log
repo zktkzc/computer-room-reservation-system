@@ -5,6 +5,4 @@ D:\Project\C\C++\机房预约系统\OrderFile.cpp(40,24): warning C4267: “=”
 D:\Project\C\C++\机房预约系统\OrderFile.cpp(48,26): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
 D:\Project\C\C++\机房预约系统\OrderFile.cpp(56,25): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
 D:\Project\C\C++\机房预约系统\OrderFile.cpp(64,25): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
-  Student.cpp
-  正在生成代码...
   机房预约系统.vcxproj -> D:\Project\C\C++\机房预约系统\x64\Debug\机房预约系统.exe
